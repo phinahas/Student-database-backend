@@ -1,9 +1,12 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 var db = require('./config/connection')
 
 const server = express()
 
+
+server.use(bodyParser.json())
 
 //Students routes
 const adminRoute = require('./routes/admin');
