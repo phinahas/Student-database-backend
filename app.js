@@ -5,6 +5,13 @@ var db = require('./config/connection')
 const server = express()
 
 
+//Students routes
+const adminRoute = require('./routes/admin');
+
+
+//Middlewears
+server.use('/',adminRoute);
+
 
 
 //Database connection
