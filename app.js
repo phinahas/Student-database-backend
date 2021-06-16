@@ -1,11 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 var db = require('./config/connection')
 
 const server = express()
 
-
+//Middlewears
+server.use(cors());
 server.use(bodyParser.json())
 
 //Students routes
@@ -27,10 +29,6 @@ db.connect((err)=>{
 
 
 
-//Routes
-server.get('/',(req,res)=>{
-    res.send("Hello")
-})
 
 
 
