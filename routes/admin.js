@@ -51,7 +51,7 @@ router.post('/update-student/:id',(req,res)=>{
 
 
 /////////////////Delete Student////////////////
-router.get('delete-student/:id',(req,res)=>{
+router.get('/delete-student/:id',(req,res)=>{
     helpers.deleteStudent(req.params.id).then(()=>{
         res.json({message:true})
     })
