@@ -33,5 +33,13 @@ module.exports={
             db.get().collection(collection.STUDENTS).replaceOne({_id:objectId(studentId)},StudentDetailes).then(()=>resolve())
 
         })
+    },
+
+    deleteStudent:(studentId)=>{
+        return new Promise((resolve,reject)=>{
+            db.get().collection(collection.STUDENTS).deleteOne({_id:objectId(studentId)}).then(()=>{
+                resolve()
+            })
+        })
     }
 }
