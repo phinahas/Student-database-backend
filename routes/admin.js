@@ -41,7 +41,7 @@ router.get('/specific-student/:id',(req,res)=>{
 
 ////////////Update Student////////////////////
 router.post('/update-student/:id',(req,res)=>{
-    console.log(req.body,req.params.id);
+    //console.log(req.body,req.params.id);
     helpers.updateStudent(req.params.id,req.body).then(()=>{
         res.json({msg:"updated"})
     })
